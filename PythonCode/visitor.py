@@ -1,9 +1,10 @@
 from PythonCode.entity import Entity
 
 class Visitor(Entity):
-     #Create a Instance or Dummy data in it Dynamically
+      # List to store instances of Visitor class
     visitors = []
 
+      # Constructor method to initialize a Visitor object
     def __init__(self, name, age, visitor_type):
         self.id = self.generate_id()
         self.name = name
@@ -12,12 +13,12 @@ class Visitor(Entity):
         self.tickets = []
         Visitor.visitors.append(self)
         
-    @classmethod
+    @classmethod    # Class method to display all visitors
     def display_visitors(cls):
         if not cls.visitors:
             print("No visitors available.")
             return
-        for visitor in cls.visitors:
+        for visitor in cls.visitors:     # Displaying information for each visitor
             print(f"Visitor ID: {visitor.id}")
             print(f"Name: {visitor.name}")
             print(f"Age: {visitor.age}")
@@ -26,5 +27,4 @@ class Visitor(Entity):
             for ticket in visitor.tickets:
                 print(f"    {ticket.exhibition.name} on {ticket.date}")
             print("-" * 20)
-            do the same with other files change  the
-        i open them from where
+           
