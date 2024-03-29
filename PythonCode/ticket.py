@@ -2,9 +2,9 @@ from PythonCode.entity import Entity, validate_date
 from PythonCode.pricing_strategy import BasePricingStrategy  
 import datetime
 class Ticket(Entity):
-     #Create a Instance or Dummy data in it Dynamically
+     # List to store instances of Ticket class
     tickets = []
-    def __init__(self, exhibition, visitor, date, ticket_type, pricing_strategy):
+    def __init__(self, exhibition, visitor, date, ticket_type, pricing_strategy):    # Constructor method to initialize a Ticket object
         self.id = self.generate_id()
         self.exhibition = exhibition
         self.visitor = visitor
